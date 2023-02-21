@@ -6512,11 +6512,9 @@
                         c > 1 && Te(f),
                         c > 1 &&
                           be(
-                            e
-                              .slice(0, c - 1)
-                              .concat({
-                                value: " " === e[c - 2].type ? "*" : "",
-                              })
+                            e.slice(0, c - 1).concat({
+                              value: " " === e[c - 2].type ? "*" : "",
+                            })
                           ).replace(z, "$1"),
                         n,
                         c < a && ke(e.slice(c, a)),
@@ -26038,16 +26036,14 @@
             (oldOnError = window.onerror),
               (window.onerror = function (e, t, n, r, a) {
                 (window.onerror = oldOnError),
-                  Utils.storyElement
-                    .parent()
-                    .append(
-                      dialog({
-                        message:
-                          "Sorry to interrupt, but this page's code has got itself in a mess.\n\n" +
-                          printJSError(a) +
-                          "\n(This is probably due to a bug in the Harlowe game engine.)",
-                      })
-                    ),
+                  Utils.storyElement.parent().append(
+                    dialog({
+                      message:
+                        "Sorry to interrupt, but this page's code has got itself in a mess.\n\n" +
+                        printJSError(a) +
+                        "\n(This is probably due to a bug in the Harlowe game engine.)",
+                    })
+                  ),
                   "function" == typeof oldOnError &&
                     oldOnError.apply(void 0, arguments);
               }),
